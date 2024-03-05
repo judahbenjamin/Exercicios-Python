@@ -135,6 +135,7 @@ c) uma informação dizendo se o candidato foi aprovado ou não. Considere que u
 maior que 7.0
 """
 
+"""
 nome = input("Nome do candidato:")
 portugues = float(input("Nota em portugues:"))
 matematica = float(input("Nota em matematica:"))
@@ -146,3 +147,56 @@ if media >= 7:
     print("O candidato foi aprovado.")
 else:
     print("O candidato foi reprovado.")
+"""
+      
+"""
+7 - Ler os nomes e os pesos de duas pessoas e imprimir os dados da pessoa mais pesada.     
+"""
+"""
+nome1 = input("Digite o primeiro nome:")
+peso1 = float(input("Digite o peso:"))
+
+nome2 = input("Digite o segundo nome:")
+peso2 = float(input("Digite o peso:"))
+
+if peso1 > peso2 :
+    nome_mais_pesado = nome1
+    peso_mais_pesado = peso1
+else:
+    nome_mais_pesado = nome2
+    peso_mais_pesado = peso2
+    
+print(f"O Nome da pessoa mais pesada: {nome_mais_pesado}")
+print(f"O Peso da pessoa mais pesada: {peso_mais_pesado}")
+
+"""
+
+"""
+8 - Ler os anos de nascimento de duas pessoas e calcular suas idades. Imprimir o nome e a idade
+de cada uma e indicar qual é a maior nova.    
+"""
+ano_atual = int(input("Digite o ano atual:"))
+pessoa_1 = input("Digite o nome da primeira pessoa:")
+ano_nasc_1 = int(input("Digite o ano de nascimento da primeira pessoa:"))
+
+pessoa_2 = input("Digite o nome da segunda pessoa:")
+ano_nasc_2 = int(input("Digite o ano de nascimento da segunda pessoa:"))
+
+idade_pessoa_1 = ano_atual - ano_nasc_1
+idade_pessoa_2 = ano_atual - ano_nasc_2
+
+if idade_pessoa_1 > idade_pessoa_2:
+    nome_mais_nova = pessoa_2
+    idade_mais_nova = idade_pessoa_2
+else: 
+    nome_mais_nova = pessoa_1
+    idade_mais_nova = idade_pessoa_1
+    
+print(f"O nome da primeira pessoa e: {pessoa_1}")
+print(f"A idade da primeira pessoa e: {idade_pessoa_1}")
+
+print(f"O nome da segunda pessoa e: {pessoa_2}")
+print(f"A idade da segunda pessoa e: {idade_pessoa_2}")
+
+print(f"O nome da pessoa mais nova e: {nome_mais_nova}")
+print(f"A idade da pessoa mais nova e: {idade_mais_nova}")
