@@ -13,7 +13,7 @@ print("Ola, Mundo!")
 """
 
 #numero = int(input("Digite um numero:"))
-#print("O numero informado foi:", numero)
+#print(f"O numero informado foi: {numero}")
 
 """
     3 - Faça um Programa que peça dois números e imprima a soma.
