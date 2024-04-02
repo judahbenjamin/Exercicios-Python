@@ -39,6 +39,7 @@ print(f"Lista dos numeros inteiros: {list_num}")
 #03 - Escreva um programa que receba uma lista de 10 inteiros via teclado, em seguida  o  
 # programa  deve  solicitar  um  número  e  informar  se  o  número também está na lista ou não.
 
+"""
 numero1 = int(input("Digite o primeiro numero:"))
 numero2 = int(input("Digite o segundo numero:"))
 numero3 = int(input("Digite o terceiro numero:"))
@@ -52,10 +53,11 @@ numero10 = int(input("Digite o decimo numero:"))
 list_num = [numero1,numero2,numero3,numero4,numero5,numero6,numero7,numero8,numero9,numero10]
 print(f"Lista dos numeros inteiros: {list_num}")
 
-solicitar = input("Digite o numero da lista: ")
-pergunta = input("O numero esta na lista(Sim - 1, Nao - 0): ")
+solicitar = input("Digite algum numero da lista:")
+pergunta = int(input("O numero esta na lista(Sim - 1, Nao - 0):"))
 
 if pergunta == 1:
     print("O numero esta na lista")
 else:
-    print("Incorreto")
+    print("Incorreto")      
+"""
