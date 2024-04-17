@@ -1,3 +1,7 @@
+#LÓGICA DE PROGRAMAÇÃO E ALGORITMO
+#DATA: 17/04/2024
+#BY JUDAH BENJAMIN
+
 lista_alunos = []
 
 def menu():
