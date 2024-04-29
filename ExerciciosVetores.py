@@ -1,7 +1,7 @@
 #LÓGICA DE PROGRAMAÇÃO E ALGORITMO
 #PROFESSOR: MÁRCIO CLAY
 #ALUNO: JUDAH BENJMAIN
-#DATA: 24/04/2024
+#DATA: 29/04/2024
 
 """
 1 - Faça um Programa que leia um vetor de 5 números inteiros e mostre-os.   
@@ -84,16 +84,102 @@ armazene num vetor a média de cada aluno, imprima o número de
 alunos com média maior ou igual a 7.0
 """ 
 
-media_alunos = []
-alunos = []
-aluno = 0
+# alunos = 10 #Declaração da quantidade de alunos
+# notas = 4 #Declaração da qauntidade de notas
 
-for x in range(10):
-    for c in alunos:
-        aluno = input("Digite o nome do aluno:")
-        for aluno in range(4):
-            nota = float(input("Digite a nota desse aluno:"))
-        resultado = sum(nota in aluno)
-        print(resultado)
-    alunos.append(aluno)
+# medias = [] #array vazio para armazenar as medias
+# media_sete = 0
+
+# for i in range(alunos): #o for vai percorrer alunos
+#     media = 0
+#     for j in range (notas): #percorrer notas
+#         media += float(input(f"Digite a nota {j+1} do aluno {i+1}: "))
+#     media  /= notas
+#     medias.append(media)
+#     if media >= 7:
+#         media_sete += 1
+        
+# print("\nA media dos alunos foi:")
+# for i in range(alunos):
+#     print(f"Aluno {i + 1}: {medias[i]}")
     
+# print(f"\n{media_sete} alunos tiveram media maior ou igual a 7.")
+
+"""
+7 - Faça um Programa que leia um vetor de 5 números inteiros, mostre a 
+soma, a multiplicação e os números.
+"""
+
+# numeros_inteiros = [20,15,7,8,12]
+
+# soma = sum(numeros_inteiros)
+# print(f"Soma: {soma}")
+
+# multiplicacao = 1
+# for n in numeros_inteiros:
+#     multiplicacao *= n
+# print(f"Multiplicacao: {multiplicacao}")    
+
+# print(f"Os numeros inteiros: {numeros_inteiros}")
+
+"""
+8 - Faça um Programa que peça a idade e a altura de 5 pessoas, 
+armazene cada informação no seu respectivo vetor. Imprima a idade e 
+a altura na ordem inversa a ordem lida.      
+"""
+
+# idade = []
+# altura = []
+# pessoas = 5
+
+# for i in range(pessoas):
+#     digitar_idade = int(input(f"Digite a idade da pessoa {i}:"))
+#     digitar_altura = float(input(f"Digite a altura da pessoa {i}:"))
+#     idade.append(digitar_idade)
+#     altura.append(digitar_altura)
+   
+# # Ordem Lida
+# print(f"\n============ Ordem lida ============")
+
+# print(f"\nAs idades informadas das pessoas: {idade}")
+# print(f"As alturas informadas das pessoas: {altura}")
+
+# #Ordem Inversa
+# idade.sort(reverse=True)
+# altura.sort(reverse=True)
+# print(f"\n=========== Ordem inversa ==========")
+
+# print(f"\nAs idades informadas das pessoas: {idade}")
+# print(f"As alturas informadas das pessoas: {altura}")
+
+"""
+9 - Faça um Programa que leia um vetor A com 10 números 
+inteiros, calcule e mostre a soma dos quadrados dos 
+elementos do vetor.
+"""
+
+# vetor_A = [20,45,3,46,11,2,90,77,9,10]
+
+# print(f"Os numeros guardados dentro do Vetor A: \n{vetor_A}")
+# print("----------------------------------------")
+# #Calculo:
+
+# soma = sum(vetor_A)
+# print(f"A soma dos itens do vetor sao: {soma}")
+
+"""
+10 - Faça um Programa que leia dois vetores com 10 elementos cada. Gere 
+um terceiro vetor de 20 elementos, cujos valores deverão ser compostos 
+pelos elementos intercalados dos dois outros vetores.      
+"""
+
+# vetor_1 = [0,5,8,10,2,34,45,22,3,1]
+# vetor_2 = [11,10,20,2,56,7,101,67,90,87]
+# vetor_3 = []
+
+# print(f"Elementos do vetor 1: \n{vetor_1}")
+# print(f"Elementos do vetor 2: \n{vetor_2}")
+
+# vetor_1.extend(vetor_2)
+# vetor_3.append(vetor_1)
+# print(f"Os dois vetores dentro do vetor 3: \n{vetor_3}")
