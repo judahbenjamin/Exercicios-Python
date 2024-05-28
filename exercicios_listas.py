@@ -280,3 +280,48 @@ correta.
 #     elif matriz[1][c] > mai:
 #         mai = matriz[1][c]
 # print(f"O maior valor da segunda linha e {mai}")
+
+"""
+11 - Faça um programa que ajude um jogador da mega sena a criar
+ palpites. O programa vai perguntar quantos jogos serão gerados e vai
+ sortear 6 números entre 1 e 60 para cada jogo, cadastrando tudo em uma
+ lista composta. Lembrando que os números não podem se repetir.     
+"""
+
+import random
+
+num_aleatorios = []
+
+# x = random.randint(1,6)
+# while True:
+
+cont = 0
+jogo = int(input("Quantos jogos gerados? "))
+cont = jogo
+print(cont)
+
+while jogo <= cont:
+    for x in cont:
+        num = random.randint(1,60)
+        num_aleatorios.append(num)
+        jogo += 1
+print(num_aleatorios)
+    
+    # if x in num_aleatorios:
+    #     #break
+    #     print("numeros iguais")
+    # else:
+    #     num_aleatorios.append(x)
+    #     print(num_aleatorios)
+    # break
+    
+#print("-=" * 30)
+
+ 
+# import random
+
+# x = random.randint(1,6)
+
+# print(x)
+
+
