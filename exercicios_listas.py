@@ -1,5 +1,5 @@
 #LOGICA DE PROGRAMAÇÃO EXERCICIOS LISTAS SIMPLES E COMPOSTAS
-#DATA: 27/05/2024
+#DATA: 28/05/2024
 
 """
 1 - Faça um programa que leia 5 valores numéricos e guarde-os em uma
@@ -288,40 +288,69 @@ correta.
  lista composta. Lembrando que os números não podem se repetir.     
 """
 
-import random
+# from random import randint
+# from time import sleep
 
-num_aleatorios = []
+# lista = list()
+# jogos = list()
 
-# x = random.randint(1,6)
+# print("-" * 30)
+# print("      JOGO MEGA SENA     ")
+# print("-" * 30)
+
+# quant = int(input("Quantos jogos voce quer sortear? "))
+# tot = 1
+# print()
+# while tot <= quant:
+#     cont = 0
+#     while True:
+#         num = randint(1,60)
+#         if num not in lista:
+#             lista.append(num)
+#             cont += 1
+#         if cont >= 6:
+#             break
+#     lista.sort()
+#     jogos.append(lista[:])
+#     lista.clear()
+#     tot += 1
+# print("-=" * 3, f" SORTEANDO {quant} JOGOS", "-=" * 3)
+# print()
+# for i, l in enumerate(jogos):
+#     print(f"Jogo {i+1}: {l}")
+#     sleep(1)
+# print()
+# print("-=" * 5, "< BOA SORTE! >", "-=" * 5)
+
+"""
+12 -  Crie um programa que leia nome e duas notas de vários alunos e
+guarde tudo em uma lista composta. No final, mostre um boletim
+contendo a média de cada um e permita que o usuário possa mostrar as
+notas de cada aluno individualmente.  
+"""
+
+# ficha = list()
+
 # while True:
-
-cont = 0
-jogo = int(input("Quantos jogos gerados? "))
-cont = jogo
-print(cont)
-
-while jogo <= cont:
-    for x in cont:
-        num = random.randint(1,60)
-        num_aleatorios.append(num)
-        jogo += 1
-print(num_aleatorios)
-    
-    # if x in num_aleatorios:
-    #     #break
-    #     print("numeros iguais")
-    # else:
-    #     num_aleatorios.append(x)
-    #     print(num_aleatorios)
-    # break
-    
-#print("-=" * 30)
-
- 
-# import random
-
-# x = random.randint(1,6)
-
-# print(x)
-
-
+#     nome = input('Nome: ')
+#     nota1 = float(input("Nota 1: "))
+#     nota2 = float(input("Nota 2: "))
+#     media = (nota1 + nota2) / 2
+#     ficha.append([nome, [nota1, nota2], media])
+#     resp = input("Quer continuar? [S/N] ")
+#     if resp in "Nn":
+#         break
+# print("-=" * 30)
+# print(f"{"No.":<4}{"NOME":<10}{"MEDIA":>8}")
+# print("-" * 26)
+# for i, a in enumerate(ficha):
+#     print(f"{i:<4}{a[0]:<10}{a[2]:>8.1f}")
+# while True:
+#     print("-" * 35)
+#     opc = int(input("Mostrar notas de qual aluno? (999 interrompe): "))
+#     if opc == 999:
+#         print("FINALIZANDO...")
+#         break
+#     if opc <= len(ficha) - 1:
+#         print(f"Notas de {ficha[opc][0]} sao {ficha[opc][1]}")
+# print("<<<< VOLTE SEMPRE >>>>")
