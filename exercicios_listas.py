@@ -1,5 +1,5 @@
 #LOGICA DE PROGRAMAÇÃO EXERCICIOS LISTAS SIMPLES E COMPOSTAS
-#DATA: 22/05/2024
+#DATA: 27/05/2024
 
 """
 1 - Faça um programa que leia 5 valores numéricos e guarde-os em uma
@@ -153,3 +153,130 @@
 #     print('Expressão invalida..')
 
 
+#LISTAS COMPOSTAS
+
+
+"""
+7 - Faça um programa que leia nome e peso de várias pessoas, guardando
+tudo em uma lista. No final mostre:
+    ● Quantas pessoas foram cadastradas
+    ● Uma listagem com as pessoas mais pesadas
+    ● Uma contagem com as pessoas mais leves   
+"""
+
+# temp = []
+# princ = []
+# mai = men = 0
+
+# while True:
+#     temp.append(input("NOME: "))
+#     temp.append(float(input("PESO: ")))
+#     if len(princ) == 0:
+#         mai = men = temp[1]
+#     else:
+#         if temp[1] > mai:
+#             mai = temp[1]
+#         if temp[1] < men:
+#             men = temp[1]
+#     princ.append(temp[:])
+#     temp.clear()
+#     resp = input("Quer continuar? [S/N] ")
+#     if resp in "Nn":
+#         break
+# print('-='*30)
+# print(f"Os dados foram {princ}")
+# print(f"Ao todo foram cadastrados {len(princ)} pessoas.")
+# print(f"O maior peso foi de {mai}Kg. Peso de", end="")
+# for p in princ:
+#     if p[1] == mai:
+#         print(f"[{p[0]}]", end="")
+# print()
+# print(f"O menor peso foi de {men}Kg. Peso de ", end='')
+# for p in princ:
+#     if p[1] == men:
+#         print(f"[{p[0]}]", end="")
+# print()
+
+"""
+8 - Crie um programa onde o usuário possa digitar sete valores numéricos
+e cadastre-os em uma lista única que mantenha separados os valores
+pares e impares. No final mostre os valores pares e impares em ordem
+crescente 
+"""
+
+# valores_num = []
+# par = []
+# impar = []
+
+# cont = 0
+
+# while cont < 7:
+#     numero = int(input("Digite um valor:"))
+#     valores_num.append(numero)
+#     cont += 1
+
+# for n in valores_num:
+#     if n % 2 == 0:
+#         par.append(n)
+#     else:
+#         impar.append(n)
+        
+# print("-="*30)
+        
+# print(f"Os numeros pares: {par}")
+# print(f"Os numeros impares: {impar}")
+
+# par.sort()
+# impar.sort()
+
+# print("-="*30)
+
+# valores_num = [par,impar]
+# print(f"Os valores numericos informados ja ordenados: {valores_num}")
+
+"""
+9 - Crie um programa que crie uma matriz de dimensão 3 x 3 e preencha
+com valores lidos pelo teclado. Mostre a matriz na tela com a formatação
+correta.     
+"""
+
+# matriz = [[0,0,0],[0,0,0],[0,0,0]]
+# for l in range(0,3):
+#     for c in range(0,3):
+#         matriz [l][c] = int(input(f"Digite um valor para [{l},{c}]: "))
+# print("-=" * 30)
+# for l in range(0,3):
+#     for c in range(0,3):
+#         print(f"[{matriz[l][c]:^5}]", end='')
+#     print()
+
+"""
+10 - Aprimore o desafio anterior, mostrando no final:
+    ● A soma de todos os valores pares digitados.
+    ● A soma dos valores da terceira coluna
+    ● O maior valor da segunda coluna   
+"""
+
+# matriz = [[0,0,0],[0,0,0],[0,0,0]]
+# spar = mai = scol = 0
+# for l in range(0,3):
+#     for c in range(0,3):
+#         matriz [l][c] = int(input(f"Digite um valor para [{l},{c}]: "))
+# print("-=" * 30)
+# for l in range(0,3):
+#     for c in range(0,3):
+#         print(f"[{matriz[l][c]:^5}]", end='')
+#         if matriz[l][c] % 2 == 0:
+#             spar += matriz[l][c]
+#     print()
+# print("-=" * 30)
+# print(f"A soma dos valores pares e {spar}.")
+# for l in range(0,3):
+#     scol += matriz[l][2]
+# print(f"A soma dos valores da terceira coluna e {scol}.")
+# for c in range(0,3):
+#     if c == 0:
+#         mai = matriz[1][c]
+#     elif matriz[1][c] > mai:
+#         mai = matriz[1][c]
+# print(f"O maior valor da segunda linha e {mai}")
