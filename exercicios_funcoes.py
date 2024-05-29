@@ -1,5 +1,5 @@
 #LOGICA DE PROGRAMAÇÃO EXERCICIOS FUNÇÕES SIMPLES E COMPOSTAS
-#DATA: 28/05/2024
+#DATA: 29/05/2024
 
 #FUNÇÕES SIMPLES
 
@@ -138,17 +138,125 @@ função anterior.
 6 - Calcule o fatorial de um número e mostre na tela o resultado
 """
 
-# def fatorial(num):
-
-   # numero = num
+# def fatorial(numero):
     
-    # resultado = 1
-    # count = 1
+#     if numero == 1:
+#         return 1
+#     else:
+#         return numero * fatorial(numero - 1)
     
-    # while count <= numero:
-    #     resultado *= count
-    #     count += 1
+# print(fatorial(5))
+# print(fatorial(15))
 
-    # print(resultado)
-    # return num
-# fatorial()
+"""
+7 - Verifica se o número é par ou ímpar 
+"""
+
+# from time import sleep
+
+# print("--" * 30)
+# print("                   <   PAR OU IMPAR?  >           ")
+# print("--" * 30)
+# print("-=" * 30)
+
+# def VerificarParImpar (numero):
+#     sleep(0.4)
+#     if numero % 2 == 0:
+#         print(f'O numero {numero} e PAR',flush=True)
+#     else: 
+#         print(f'O numero {numero} e IMPAR',flush=True)
+#     return numero
+
+# VerificarParImpar(2)
+# VerificarParImpar(3)
+# VerificarParImpar(21780)
+# VerificarParImpar(37)
+# VerificarParImpar(18)
+# VerificarParImpar(10)
+# VerificarParImpar(205)
+# VerificarParImpar(146)
+
+"""
+8 - Crie um programa que tenha uma função chamada voto() que vai receber como
+parâmetro o ano de nascimento de uma pessoa, retornando um valor literal indicando se
+uma pessoa tem voto negado, opcional ou obrigatório nas eleições 
+"""
+
+# from time import sleep
+
+# print("--" * 30)
+# print("                <<<   VOTO ELEITORAL  >>>           ")
+# print("--" * 30)
+# print("-=" * 30)
+
+# def voto(AnoNascimento):
+#     AnoAtual = 2024
+#     Idade = AnoAtual - AnoNascimento
+#     sleep(0.4)
+
+#     if Idade >= 18 and Idade < 70:
+#         print(f'Sua idade e {Idade} <Voto Obrigatorio>', flush=True)
+#     elif Idade >= 16 and Idade < 18:
+#         print(f'Sua idade e {Idade} <Voto Opcional>', flush=True)
+#     elif Idade >= 70:
+#         print(f'Sua idade e {Idade} <Voto Opcional>', flush=True)
+#     else:
+#         print(f'Sua idade e {Idade} <Voto Negado>', flush=True)
+        
+#     return Idade
+
+# voto(2000)
+# voto(2007)
+# voto(2009)
+# voto(1940)
+# voto(2005)
+# voto(2001)
+# voto(1995)
+
+"""
+9 - Crie um programa que tenha uma função fatorial() que receba dois parâmetros: o
+primeiro que indique o número a calcular e o outro chamado show que será um valor lógico
+(opcional) indicando se será mostrado ou não na tela o processo de calculo do fatorial 
+"""
+
+# from time import sleep
+# import math
+
+# def fatorial(num,show=False):
+#     calculo = math.factorial(num)
+#     print("--" * 30)
+#     sleep(0.4)
+#     print(f'Valor digitado: {num}',flush=True)
+#     sleep(0.4)
+#     show = input('Deseja mostrar o calculo? [S/N] ')
+    
+#     if show in "Ss":
+#         sleep(0.4)
+#         print(f'O fatorial de {num} e {calculo}',flush=True)
+#         return show
+#     else:
+#         sleep(0.4)
+#         print('CALCULO ENCERRADO...')
+        
+# fatorial(10,'')
+# fatorial(5,'')
+# fatorial(11,'')
+# fatorial(17,'')
+# fatorial(45,'')
+
+"""
+10 - Faça um programa que tenha uma função chamada ficha() que receba dois parâmetros
+opcionais: o nome de um jogador e quantos gols ele marcou. O programa deverá ser capaz
+de mostrar a ficha do jogador, mesmo que algum dado não tenha sido informado
+corretamente
+"""
+
+# def ficha(jogador,gols):
+#     jogador = input('JOGADOR: ')
+#     gols = int(input('GOLS: '))
+#     # print(jogador,gols)
+    
+#     print('--' * 16)
+#     print(f"{" ":<6}{'JOGADOR':<10}{'GOLS':>8}")
+#     print()
+# ficha('','')
