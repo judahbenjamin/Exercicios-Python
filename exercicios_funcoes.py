@@ -251,12 +251,117 @@ de mostrar a ficha do jogador, mesmo que algum dado não tenha sido informado
 corretamente
 """
 
-# def ficha(jogador,gols):
-#     jogador = input('JOGADOR: ')
-#     gols = int(input('GOLS: '))
-#     # print(jogador,gols)
+# def ficha(jog='<desconhecido>',gol=0):
+#     print(f'O jogador {jog} fez {gol} gol(s) no campeonato.')
+
+# n = input('Nome do Jogador: ')
+# g = input('Numero de Gols: ')
+# if g.isnumeric():
+#     g = int(g)
+# else:
+#     g = 0
+# if n.strip() == '':
+#     ficha(gol = g)
+# else:
+#     ficha(n, g)
+
+"""
+11 - Crie um programa que tenha a função leiaInt() que vai funcionar de forma semelhante à
+função input() do python, só que fazendo a validação para aceitar apenas um valor
+numérico. Ex n = leiaInt(’Digite um n’) 
+"""
+
+# from time import sleep
+
+# def leiaInt():
+#     sleep(0.5)
+#     leiaInt = input
+#     n = leiaInt('Digite um numero: ')
+
+#     if n.isnumeric():
+#         sleep(0.5)
+#         n = int(n)
+#         print(f'O numero digitado foi {n}',flush=True)
+#     else:
+#         print('O valor NAO e numerico.')
+#     print("-=" * 30)
+#     print('<FIM...>')
+# leiaInt()
+
+"""
+12 - Faça um programa que tenha uma função notas() que pode receber várias notas de alunos e vai
+retornando um dicionário com as seguinte informações:
+● Quantidade de notas
+● a maior nota
+● a menor nota
+● a média da turma
+● a situação ( opcional )       
+"""
+
+# def notas(*n, sit=False):
+#     """
+#     --> Funcao para analisar notas e situacoes de varios alunos
+#     :param n: uma ou mais notas dos alunos (aceita varias)
+#     :param sit: valor opcional, indicando se deve ou nao adicionar a situacao.
+#     :return: dicionario com varias informações sobre a situacao da turma.
+#     """
+#     r = dict()
+#     r['total'] = len(n)
+#     r['maior'] = max(n)
+#     r['menor'] = min(n)
+#     r['media'] = sum(n)/len(n)
+#     if sit:
+#         if r['media'] >= 7:
+#             r['situacao'] = 'BOA'
+#         elif r['media'] >= 5:
+#             r['situacao'] = 'RAZOAVEL'
+#         else:
+#             r['situacao'] = 'RUIM'    
+#     return r
+
+# resp = notas(5.5, 2.5, sit=True)
+# print(resp)
+# # help(notas)
+
+"""
+13 -  Faça um mini sistema que utilize o interactive help do python. O usuário vai digitar o
+comando e o manual vai aparecer. Quando o usuário digitar a palavra “fim” o programa será
+encerrado, também utilize cores  
+"""
+
+# from time import sleep
+# c = ('\033[m',        #0 - sem cores
+#      '\033[0;30;41m', #1 - vermelho   
+#      '\033[0;30;42m', #2 - verde
+#      '\033[0;30;43m', #3 - amarelo
+#      '\033[0;30;44m', #4 - azul
+#      '\033[0;30;45m', #5 - roxo
+#      '\033[7;30m'     #6 - branco
+#      );
+
+# def ajuda(com):
+#     titulo(f'Acessando o manual do comando \'{com}\'', 4)
+#     print(c[6], end='')
+#     help(com)
+#     print(c[0], end='')
+#     sleep(2)
     
-#     print('--' * 16)
-#     print(f"{" ":<6}{'JOGADOR':<10}{'GOLS':>8}")
-#     print()
-# ficha('','')
+# def titulo(msg, cor = 0):
+#     tam = len(msg) + 4
+#     print(c[cor], end='')
+#     print('~' * tam)
+#     print(f' {msg}')
+#     print('~' * tam)
+#     print(c[0], end='')
+#     sleep(1)
+
+# comando = ''
+# while True:
+#     titulo('SISTEMA DE AJUDA PyHELP', 2)
+#     comando = input("Funcao ou biblioteca > ")
+#     if comando.upper() == 'FIM':
+#         break
+#     else:
+#         ajuda(comando)
+# titulo('ATE LOGO', 1)
+
