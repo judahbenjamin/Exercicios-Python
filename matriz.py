@@ -1,97 +1,75 @@
-# # matriz = [[1,2,3],[4,5,6],[7,8,9]]
+#ALGORITMO E LÓGICA DE PROGRAMAÇÃO
+#DATA: 25/06/2024
+#EXERCICIO
 
-# # # print(matriz)
-# # for linha in matriz:
-# #     print(linha)
-# #     # for coluna in linha:
-# #     #     print(coluna)
+from time import sleep
 
-# # print('-='*30)
-# # print("ACESSANDO OS ELEMENTOS DA MATRIZ:")
-# # print(matriz[0][0])
-# # print(matriz[1][0])
-# # print(matriz[2][0])
-# # print()
-# # print(matriz[0][1])
-# # print(matriz[1][1])
-# # print(matriz[2][1])
-# # print()
-# # print(matriz[0][2])
-# # print(matriz[1][2])
-# # print(matriz[2][2])
+teste_1 = []
+teste_2 = []
+teste_3 = []
+matriz = [teste_1,teste_2,teste_3]
+print()
+print('               <<<<     MATRIZ 3 X 3     >>>>                  ')
+print()
+sleep(0.4)
+print('=-'*30)
+pergunta_1 = input('Deseja iniciar o programa? (S/N) ')
 
-# #ATENÇÃO -----> matriz [linha][coluna]
-
-# # nomes = [['Judah','Linda Ines'],['Adenilton','Joao']]
-
-# # for linha in nomes:
-# #     print(linha)
-
-# # if linha == nomes[0][0]:
-# #     print(linha)
-# # print(nomes[0][0])
-# # print(nomes[1][0])
-
-# #EXERCÍCIO
-
-# # teste_1 = []
-# # teste_2 = []
-# # teste_3 = []
-# teste = []
-# matriz = [teste,teste,teste]
-
-# q = 0
-# pergunta = False
-
-# print('<       TESTE MATRIZ        >')
-
-# def AddMatriz (teste):
-#     teste = int(input("QUANTOS NUMEROS? "))
-#     matriz.append(teste)
-#     return teste
-
-# AddMatriz(teste)
-# print(teste)
-
-# # # pergunta = input('Deseja iniciar o programa? ')
-
-# # # if pergunta == "S":
-# # #     print('ok')
-# # # else:
-# # #     print('Nao')
-# # # while q < 3:
-
-# # #     print('PRIMEIRO VETOR:')
+if pergunta_1 in 'Ss':
+    # print('OK')
+    cont1 = 0
+    quant_num = 3
     
-# # #     quant = int(input("QUANTOS NUMEROS? "))
-    
-# # #     for q in range(quant):
-# # #         num = int(input("NUMERO: "))
-# # #         teste_1.append(num)
-# # #         q += 1
+    while cont1 < quant_num:
+        sleep(0.2)
+        num = int(input('NÚMERO: '))
+        teste_1.append(num)
+        cont1 += 1
         
-# # # resposta_2 = False
-# # # resposta_2 = bool(input('Deseja continuar a adicionar no segundo vetor? (S/N) '))
-
-# # # if resposta_2 == True :
-# # #     quant_2 = int(input("QUANTOS NUMEROS? "))
+    print(f'Primeiro vetor adicionado: {matriz}',flush=True)
+    print()
+    pergunta_2 = input('Deseja continuar? (S/N) ')
     
-# # #     while q2 < quant_2:
-# # #         num = int(input("NUMERO: "))
-# # #         teste_2.append(num)
-# # #         q2 += 1
+    if pergunta_2 in 'Ss':
+        cont2 = 0
+        quant_num = 3
+        while cont2 < quant_num:
+            sleep(0.2)
+            num = int(input('NÚMERO: '))
+            teste_2.append(num)
+            cont2 += 1
+            
+        print(f'Segundo vetor adicionado: {matriz}',flush=True)
+        print()
+        pergunta_3 = input('Deseja continuar mais uma vez? (S/N) ')
         
-        
-# # # resposta_3 = False
-# # # resposta_3 = bool(input('Deseja continuar a adicionar no terceiro vetor? (S/N) '))
-
-# # # if resposta_3 == True:
-# # #     quant_3 = int(input("QUANTOS NUMEROS? "))
+        if pergunta_3 in 'Ss':
+            cont3 = 0
+            quant_num = 3
+            
+            while cont3 < quant_num:
+                sleep(0.2)
+                num = int(input('NÚMERO: '))
+                teste_3.append(num)
+                cont3 += 1
+            
+            print(f'Terceiro vetor adicionado: {matriz}',flush=True)
+            print('=-'*30)
+            print()
+            print('APRESENTAÇÃO DA MATRIZ')
+            
+            for linha in matriz:
+                print(linha)
+                
+            with open('matriz.txt','a') as arquivo:
+                arquivo.write(f'{matriz}')
+                
+        else:
+            print(f'Matriz incompleta: {matriz}')
+            
+    else:
+        print('Fim')
     
-# # #     while q3 < quant:
-# # #         num = int(input("NUMERO: "))
-# # #         teste_3.append(num)
-# # #         q3 += 1                       
-
-# # print(matriz)
+else:
+    print('FIM DO PROGRAMA!')
 
