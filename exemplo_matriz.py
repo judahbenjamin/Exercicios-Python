@@ -1,3 +1,6 @@
+#ALGORIMTO E LÓGICA DE PROGRAMAÇÃO
+#DATA: 25/06/2024
+
 notas = [[10,9,7],
          [8,5,9],
          [5,10,2]]
