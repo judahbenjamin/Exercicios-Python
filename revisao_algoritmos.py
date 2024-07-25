@@ -84,50 +84,84 @@
 # d)	Qual o número e o peso do boi mais pesado; e
 # e)	Qual o número e o peso do boi mais leve.
 
-# quant_bois = boi_pesado = boi_leve = 0
-# pesos = []
-# bois = []
+quant_bois = 0
+pesos = []
+bois = []
 
-# while True:
-#     numero = int(input('NUMERO: '))
-#     peso = float(input('PESO DO BOI: '))
-#     pesos.append(peso)
-#     quant_bois += 1
+while True:
+    numero = int(input('NUMERO: '))
+    peso = float(input('PESO DO BOI: '))
+    pesos.append(peso)
+    quant_bois += 1
     
-#     answ = int(input('Deseja continuar? (S - 1 ; N - 0) '))
-#     bois.append([numero,peso])
-#     print('=-'*30)
+    answ = int(input('Deseja continuar? (S - 1 ; N - 0) '))
+    bois.append([numero,peso])
+    print('=-'*30)
     
-#     for p in bois:
-#         numero, peso = p
-#         boi_pesado = max(pesos)
-#         boi_leve = min(pesos)
-        
-#     # if cont == 0:
-#     #     boi_pesado = peso
-#     #     num_pesado = numero
-#     #     boi_leve = peso
-#     #     num_leve = numero
+    primeira_posicao = bois[0]
+    boi_leve = primeira_posicao[1]
+    num_leve = primeira_posicao[0]
+    boi_pesado = primeira_posicao[1]
+    num_pesado = primeira_posicao[0]
 
-#     # if peso > boi_pesado:
-#     #     boi_pesado = peso
-#     #     num_pesado = numero
+    for p in bois:
+        numero, peso = p
+
+        if peso > boi_pesado:
+            boi_pesado = peso
+            num_pesado = numero
+            
+        if peso < boi_pesado:
+            boi_leve = peso
+            num_leve = numero
         
-#     # if peso < boi_pesado:
-#     #     boi_leve = peso
-#     #     num_leve = numero
-    
-#     if answ == 0:
-#         break
+    if answ == 0:
+        break
      
-# print(f'A quantidade de bois foi {quant_bois}')
-# print(f'O total de peso dos bois e: {sum(pesos)}')
-# print(f'A media de peso dos bois e: {sum(pesos)/quant_bois:.2f}')
-# print(f'O peso do boi mais pesado e {boi_pesado}, o numero e {numero}')
-# print(f'O peso do boi mais leve e {boi_leve}, o numero e {numero}')
+print(f'A quantidade de bois foi {quant_bois}')
+print(f'O total de peso dos bois e: {sum(pesos)}')
+print(f'A media de peso dos bois e: {sum(pesos)/quant_bois:.2f}')
+print(f'O peso do boi mais pesado e {boi_pesado}, o numero e {num_pesado}')
+print(f'O peso do boi mais leve e {boi_leve}, o numero e {num_leve}')
 
 
 # 4 – Faça um programa que gere um vetor de 10 posições para números inteiros, preencha o vetor com números diversos, organize o vetor do menor para o maior e mostre:
 # a)	O vetor digitado originalmente;
 # b)	O vetor organizado do menor para o maior;
 
+# count = 0
+# inteiros = []
+
+# while count < 10:
+#     num = int(input(f"Posição {count} = "))
+#     inteiros.append(num)
+#     count += 1
+# print()
+# print('=-'*30)
+# print(f'O vetor digitado originalmente: {inteiros}')
+# inteiros.sort(reverse=False)
+# print(f'O vetor organizado do menor para o maior: {inteiros}')
+
+# 5 - Faça um programa que gere uma matriz de 3 x 3, que receba números aleatórios, organize esta matriz do maior para o menor e mostre:
+# a)    A matriz digitada originalmente;
+# b)    A matriz organizada do menor para o maior;
+# c)    O maior valor da matriz;
+# d)    A média dos números digitados na matriz.
+
+# matriz = [[0,0,0],[0,0,0],[0,0,0]]
+
+# for linha in range(0, 3):
+#     for coluna in range(0, 3):
+#         matriz[linha][coluna] = int(input(f'Digite um valor [{linha},{coluna}]: '))
+# print('=-='*30)
+# for linha in range(0, 3):
+#     for coluna in range(0, 3):
+#         print(f'[{matriz[linha][coluna]:^5}]', end='')
+#     print()
+# print()
+# matriz.sort()
+# print(matriz)
+# for linha in range(0, 3):
+#     for coluna in range(0, 3):
+#         print(f'[{matriz[linha][coluna]:^5}]', end=' ')
+#     print()
