@@ -38,7 +38,7 @@ while True:
     if opcao == "2":
         print("\n\n#### Lista dos dados inseridos   ###")
         for dadosUmaPessoa in ListaGeralPessoas:
-            nome,telefone, cpf,
+            nome, telefone, cpf, salario = dadosUmaPessoa
 
     if opcao == "9":
         print("PROGRAMA ENCERRADO...")
