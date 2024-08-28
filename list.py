@@ -1,3 +1,7 @@
+#ESTRUTURA DE DADOS 
+#JUDAH BENJAMIN
+#DATA: 28/08/2024
+
 ListaGeralPessoas = []
 
 while True:
@@ -6,7 +10,8 @@ while True:
     print("Inserir Dados Pessoa            < 1 >")
     print("Listar Pessoas                  < 2 >")
     print("Visualizacao resumida           < 3 >")
-    print("Sair                            < 9 >")
+    print("Busca do funcionario            < 4 >")
+    print("Sair                            < 5 >")
     opcao = input("Digite a opcao: ")
 
     if opcao == "1":
@@ -41,14 +46,31 @@ while True:
         print("\n\n#### Lista dos dados inseridos   ###")
         for dadosUmaPessoa in ListaGeralPessoas:
             nome, telefone, cpf, rg, email, salario, quant_filhos = dadosUmaPessoa
+            print(f"Nome : {nome} - Telefone: {telefone} - CPF: {cpf} - RG: {rg} - E-mail: {email} - Salário: {salario} - Quantidade de filhos: {quant_filhos}")
 
-        print(ListaGeralPessoas)
 
     if opcao == "3":
         print("\n\n#### Visualizacao resumida   ###")
         for dadosUmaPessoa in ListaGeralPessoas:
-            nome, cpf = dadosUmaPessoa
+            nome, telefone, cpf, rg, email, salario, quant_filhos = dadosUmaPessoa
+            print(f"Nome: {nome} - CPF: {cpf}")
 
-    if opcao == "9":
+    if opcao == "4":
+        print("\n\n#### Busca do funcionario   ###")
+
+        busca_funcionario = input("Digite o funcionario: ")
+        b = 0
+
+        for dadosUmaPessoa in ListaGeralPessoas:
+            nome, telefone, cpf, rg, email, salario, quant_filhos = dadosUmaPessoa
+
+            if busca_funcionario == nome:
+                print(f"Nome : {nome} - Telefone: {telefone} - CPF: {cpf} - RG: {rg} - E-mail: {email} - Salário: {salario} - Quantidade de filhos: {quant_filhos}")
+                b = 1
+
+            if busca_funcionario == 0:
+                print("\nInvalido")
+
+    if opcao == "5":
         print("PROGRAMA ENCERRADO...")
         break
