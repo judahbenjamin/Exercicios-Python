@@ -199,3 +199,70 @@ d. Exibir um menu com as opções existentes no programa.
 #     alunos_notas.append(soma_notas)
 #     nomes.append(alunos_notas)
 #     print(nomes)  
+
+#CÓDIGO CORRIGIDO
+
+# def criar_aluno():
+#     nome = input("Digite o nome do aluno: ")
+#     notas = []
+#     for i in range(4):
+#         nota = float(input(f"Digite a {i+1}ª nota: "))
+#         notas.append(nota)
+#     return nome, notas
+
+# def calcular_media(notas):
+#     return sum(notas) / len(notas)
+
+# def aprovado_reprovado(media):
+#     return "Aprovado" if media >= 7 else "Reprovado"
+
+# def exibir_alunos(alunos):
+#     for aluno, notas in alunos.items():
+#         media = calcular_media(notas)
+#         print(f"Aluno: {aluno}")
+#         print(f"Notas: {notas}")
+#         print(f"Média: {media:.2f} - {aprovado_reprovado(media)}")
+#         print("-" * 20)
+
+# def exibir_aprovados_reprovados(alunos):
+#     aprovados = []
+#     reprovados = []
+#     for aluno, notas in alunos.items():
+#         media = calcular_media(notas)
+#         if media >= 7:
+#             aprovados.append(aluno)
+#         else:
+#             reprovados.append(aluno)
+
+#     print("Alunos Aprovados:")
+#     for aluno in aprovados:
+#         print(aluno)
+
+#     print("\nAlunos Reprovados:")
+#     for aluno in reprovados:
+#         print(aluno)
+
+# def main():
+#     alunos = {}
+#     while True:
+#         print("\n--- Menu ---")
+#         print("1. Cadastrar novo aluno")
+#         print("2. Exibir todos os alunos")
+#         print("3. Exibir aprovados e reprovados")
+#         print("4. Sair")
+#         opcao = int(input("Escolha uma opção: "))
+
+#         if opcao == 1:
+#             nome, notas = criar_aluno()
+#             alunos[nome] = notas
+#         elif opcao == 2:
+#             exibir_alunos(alunos)
+#         elif opcao == 3:
+#             exibir_aprovados_reprovados(alunos)
+#         elif opcao == 4:
+#             break
+#         else:
+#             print("Opção inválida.")
+
+# if __name__ == "__main__":
+#     main()
