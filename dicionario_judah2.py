@@ -74,66 +74,85 @@ deverão ser exibidas aleatoriamente.(Antes de fazer esta atividade leia com mui
 atenção o enunciado)    
 """
 
-# lista_objetos = []
-# dados_objetos = {}
+# objetos = {}
 
-# pergunta = input("Deseja iniciar o programa? (S - 1; N - 0) ")
+# while True:
+#     nome_objeto = input("Nome do objeto: ")
+#     descricao_objeto = input("Descrição do objeto: ")
 
-# while (pergunta != 0):
-#     objeto = input("Digite o objeto: ")
-#     descricao = input("Descreva o objeto: ")
-#     lista_objetos.append(objeto)
-#     lista_objetos.append(descricao)
-    
-#     resposta = input("Deseja continuar? (S - 1; N - 0) ")
+#     objetos[nome_objeto] = descricao_objeto
 
-#     if(resposta != 1):
+#     opcao = int(input("DESEJA CONTINUAR? ( S - 1 ; N - 0 ) "))
+
+#     if opcao == 0:
 #         break
-
-# print(f"A lista contem os seguintes objetos: \n{lista_objetos}\n")
+# print()
+# print(f"Listando os objetos: \n{objetos}")
 
 # nome_objeto = input("Digite o nome do objeto: ")
 
-# if nome_objeto in dados_objeto:
-#     detalhes = dados_objeto[nome_objeto]
-#     print(f"Descricao do objeto: {detalhes["descricao"]}",flush=True)
-# else:
-#     print(f"O objeto com o nome {nome_objeto} não foi encontrado.")
+# if nome_objeto in objetos:
+#     digitar = int(input("Deseja digitar uma descricao extra? (S - 1; N - 0) "))
 
-# print("PROGRAMA FINALIZADO...")
+#     if digitar == 0:
+#         detalhes2 = objetos[nome_objeto]
+#         print(f"Descricao do objeto: {detalhes2}")
+#     elif digitar == 1:
+#         detalhes3 = input("Digite uma outra descricao: ")
+#         detalhes1 = objetos[nome_objeto]
+#         detalhes2 = objetos[nome_objeto]
+#         print(f"Descricao do objeto: {detalhes2}")
+#         print(f"Outra descricao do mesmo objeto: {detalhes3}")
+#         objetos[nome_objeto] = descricao_objeto
+#         print(objetos)
+# else:
+#     print("DEU ERRO.")
+
+# print("FIM DO PROGRAMA...")
+
+#CÓDIGO CORRIGIDO
+
+import random
 
 objetos = {}
 
+def adicionar_objeto():
+    nome = input("Nome do objeto: ")
+    descricao = input("Descrição do objeto: ")
+    if nome in objetos:
+        objetos[nome].append(descricao)
+    else:
+        objetos[nome] = [descricao]
+
+def listar_objetos():
+    for nome, descricoes in objetos.items():
+        print(f"Nome: {nome}")
+        print(f"Descrição: {random.choice(descricoes)}")
+        print("-" * 20)
+
+def buscar_objeto():
+    nome = input("Nome do objeto a buscar: ")
+    if nome in objetos:
+        print(f"Descrição: {random.choice(objetos[nome])}")
+    else:
+        print("Objeto não encontrado.")
+
 while True:
-    nome_objeto = input("Nome do objeto: ")
-    descricao_objeto = input("Descrição do objeto: ")
+    print("\n--- Menu ---")
+    print("1. Adicionar objeto")
+    print("2. Listar objetos")
+    print("3. Buscar objeto")
+    print("4. Sair")
+    opcao = int(input("Escolha uma opção: "))
 
-    objetos[nome_objeto] = descricao_objeto
-
-    opcao = int(input("DESEJA CONTINUAR? ( S - 1 ; N - 0 ) "))
-
-    if opcao == 0:
+    if opcao == 1:
+        adicionar_objeto()
+    elif opcao == 2:
+        listar_objetos()
+    elif opcao == 3:
+        buscar_objeto()
+    elif opcao == 4:
         break
-print()
-print(f"Listando os objetos: \n{objetos}")
-
-nome_objeto = input("Digite o nome do objeto: ")
-
-if nome_objeto in objetos:
-    digitar = int(input("Deseja digitar uma descricao extra? (S - 1; N - 0) "))
-
-    if digitar == 0:
-        detalhes2 = objetos[nome_objeto]
-        print(f"Descricao do objeto: {detalhes2}")
-    elif digitar == 1:
-        detalhes3 = input("Digite uma outra descricao: ")
-        detalhes1 = objetos[nome_objeto]
-        detalhes2 = objetos[nome_objeto]
-        print(f"Descricao do objeto: {detalhes2}")
-        print(f"Outra descricao do mesmo objeto: {detalhes3}")
-        objetos[nome_objeto] = descricao_objeto
-        print(objetos)
-else:
-    print("DEU ERRO.")
-
-print("FIM DO PROGRAMA...")
+    else:
+        print("Opção inválida.")
+    
