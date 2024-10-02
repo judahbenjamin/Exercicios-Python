@@ -1,4 +1,4 @@
-#POR JUDAH BENJAMIN - 25/09/24
+#POR JUDAH BENJAMIN - 02/10/24 (ATUALIZADO)
 #ESTRUTURA DE DADOS
 
 """
@@ -12,83 +12,60 @@ Sair do programa( e gravar os dados que estão contidos na lista de dados)
 Atenção: O programa deve carregar os dados contidos no arquivo de "memória" ao ser inicializado. 
 """
 
-# dados_pessoa = []
-
-# def gravando_em_arquivo(nome,telefone,email,cpf):
-#     with open('arquivo.txt','w') as arquivo:
-#         arquivo.write("\n"+nome)
-#         arquivo.write("\n"+telefone)
-#         arquivo.write("\n"+email)
-#         arquivo.write("\n"+cpf)
-
-# def ler_arquivos():
-#     with open('arquivo.txt','r') as arquivo:
-#         conteudo = arquivo.read()
-#         return conteudo
-    
-# dado_programa = ler_arquivos()
-
-# while True:
-
-#     print("========= MENU =========")
-#     print("Insere dados --------- 1")
-#     print("Exibe dados ---------- 2")
-#     print("Sair do programa ----- 3")
-#     opcao = int(input("Digite uma opcao: "))
-
-#     if opcao == 1:
-#         dados_pessoa = {}
-#         nome = input("Nome da pessoa: ")
-#         telefone = input("Telefone da pessoa: ")
-#         email = input("E-mail da pessoa: ")
-#         cpf = input("CPF da pessoa: ")
-#         print()
-#         gravando_em_arquivo(nome,telefone,email,cpf)
-
-#     elif opcao == 2:
-#         print(ler_arquivos())
-#         print()
-
-#     elif opcao == 3:
-#         print("PROGRAMA FINALIZADO...")
-#         break
-
 import json
 
-# Dicionário de exemplo
+pessoas = []
 
-cont = 0
-quant = int(input("Digite quantidade de vezes? "))
-
-for cont in range(cont):
+def adicionar_pessoas():
+    lista_pessoas = {}
+    
+    print("======================")
 
     nome = input("Nome: ")
-    idade = int(input("Idade: "))
-    cidade = input("Cidade: ")
+    telefone = input("Telefone: ")
+    email = input("Email: ")
+    cpf = input("CPF: ")
 
-    pessoa = {
-        'nome': nome,
-        'idade': idade,
-        'cidade': cidade
-    }
+    print("======================")
 
-#PROCESSO DE GRAVAÇÃO DE DICIONÁRIO EM ARQUIVO.
-#
-# Grava o dicionário em um arquivo chamado 'dicionario.json'
-with open('arquivo.txt', 'w') as arquivo:
-    json.dump(pessoa, arquivo)
-    #Faz a união do dicionário com o objeto arquivo.
+    lista_pessoas["Nome"] = nome
+    lista_pessoas["Telefone"] = telefone
+    lista_pessoas["Email"] = email
+    lista_pessoas["CPF"] = cpf
+    
+    pessoas.append(lista_pessoas)
 
+def listar_pessoas():
+  print()
+  print("Listagem das pessoas:")
+  for umaPessoa in pessoas:
+      print (umaPessoa)
 
-#PROCESSO DE LEITURA EM ARQUIVO DE UM DICIONÁRIO.
-#
-# Inicializa um dicionário vazio para guardar os dados recebidos.
-dadosRecebidos = {}
+def gravar_dados():
+    with open("arquivo.json","w") as arquivo:
+        json.dump(pessoas,arquivo)
 
-# Abre o arquivo 'dicionario.json' para leitura
-with open('arquivo.txt', 'r') as arquivo:
-    # Carrega os dados do arquivo para o dicionario_lido
-    dicionario_lido = json.load(arquivo)
+    with open("arquivo.json","r") as arquivo:
+        dados_lidos = json.load(arquivo)
+        
+while True:
+    print("\n--- Menu ---")
+    print("1. Adicionar pessoas")
+    print("2. Listar pessoas")
+    print("3. Sair")
+    opcao = input("Escolha uma opção: ")
+    print()
 
-# Exibe o dicionário lido do arquivo
-print(dicionario_lido)
+    if opcao =='1':
+        adicionar_pessoas()
+
+    elif opcao == '2':
+        listar_pessoas()
+
+    elif opcao == '3':
+        gravar_dados()
+        print("ATENÇÃO! OS DADOS FORAM GRAVADOS")
+        print("PROGRAMA FINALIZADO...")
+        break
+    else:
+        print("Opção inválida.")
