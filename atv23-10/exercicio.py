@@ -15,47 +15,63 @@ Cuidado com o uso de IA's
 O uso de códigos "Similares" provocará com que a atividade seja ignorada. 
 """
 
-termos = []
+# termos = []
 
-def adicionar_termos():
-    lista_termos = {}
+# def adicionar_termos():
+#     lista_termos = {}
     
-    print(30*"=-")
+#     print(30*"=-")
 
-    nome_termo = input("Digite o nome do termo: ")
-    descricao_termo = input("Digite a descrição do termo: ")
+#     nome_termo = input("Digite o nome do termo: ")
+#     descricao_termo = input("Digite a descrição do termo: ")
+#     descricoes_termos = []
+#     while descricao_termo != 'sair':
+#         descricoes_termos.append(descricao_termo)
+#         descricao_termo = input("Digite outra descrição do termo (Para terminar digite: 'sair'): ")
+#     lista_termos["Descrições"] = descricoes_termos    
 
-    print(30*"=-")
+#     print(30*"=-")
 
-    lista_termos["Termo"] = nome_termo
-    lista_termos["Descricao"] = descricao_termo
+#     lista_termos["Termo"] = nome_termo
     
-    termos.append(lista_termos)
+#     termos.append(lista_termos)
 
-def listar_termos():
-  print()
-  print("Listagem dos termos inseridos:")
-  for t in termos:
-      print (t)
+# def listar_termos():
+#   print()
+#   print("Listagem dos termos inseridos:")
+#   for t in termos:
+#       print (t)
+      
+# def buscar_termos():
+#     buscar_termo = input("Digite o termo que queira buscar: ")
+#     if buscar_termo in listar_termos:
+#         print("Descrições:")
+#         for descricao in listar_termos[buscar_termo]:
+#             print(f"{descricao}")
+#     else:
+#         print(f"O termo {buscar_termo} não foi encontrado.")
 
-while True:
-    print("\n--- Menu ---")
-    print("1. Adicionar termos")
-    print("2. Listar termos")
-    print("3. Sair")
-    opcao = input("Escolha uma opção: ")
-    print()
+# while True:
+#     print("\n--- Menu ---")
+#     print("1. Adicionar termos")
+#     print("2. Listar termos")
+#     print("3. Buscar termos")
+#     print("4. Sair")
+#     opcao = input("Escolha uma opção: ")
+#     print()
 
-    if opcao =='1':
-        adicionar_termos()
+#     if opcao =='1':
+#         adicionar_termos()
 
-    elif opcao == '2':
-        listar_termos()
+#     elif opcao == '2':
+#         listar_termos()
 
-    elif opcao == '3':
-        break
-    
-    else:
-        print("Opção inválida.")
+#     elif opcao == '3':
+#         buscar_termos()
+        
+#     elif opcao == '4':
+#         break
+#     else:
+#         print("Opção inválida.")
 
 
