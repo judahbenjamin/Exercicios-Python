@@ -1,0 +1,10 @@
+111.222.333-44;Maria Silva;30
+555.666.777-88;João Santos;25
+999.888.777-66;Ana Paula;45
+123.456.789-00;Pedro Álvares;22
+987.654.321-11;Mariana Costa;38
+444.333.222-11;Carlos Oliveira;50
+777.888.999-22;Fernanda Lima;29
+000.111.222-33;Gabriel Souza;19
+333.444.555-66;Juliana Pereira;33
+666.555.444-77;Rafael Martins;41
